@@ -1,0 +1,32 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-gateways",
+    "name": "cutepe-gateway",
+    "license": "MIT",
+    "category": "gateway",
+    "description": {
+        "name": "CutePe Gateway",
+        "tagline": "Payment Gateway to Collect Payments",
+        "long": "This Module will help you to collect payments via CutePe QR payment system.",
+        "features": [
+            "Instant Payment",
+            "Realtime Response"
+        ]
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https:\/\/cutepe.com\/", 
+        "learn_more": "https:\/\/cutepe.com\/", 
+        "email": "support@cutepe.com", 
+        "support_url": "https:\/\/cutepe.com\/contact",
+        "docs_url": "https:\/\/cutepe.com\/dashboard"
+    },
+    "authors": [
+        {
+            "name": "A3LRK Technologies",
+            "homepage": "https:\/\/cutepe.com\/"
+        }
+    ]
+}
