@@ -11,7 +11,7 @@ Integrate CutePe payment gateway with WHMCS to accept payments securely.
 
 ## Installation
 
-1. Upload files to your WHMCS installation's `modules/gateways` directory.
+1. Upload and extract the zip file to your WHMCS installation's `modules` directory.
 
 2. Enable CutePe module in WHMCS admin panel.
 
