@@ -26,7 +26,7 @@ Integrate CutePe payment gateway with WHMCS to accept payments securely.
 
     ![CutePe WHMCS Module Activation in WHMCS](https://i.ibb.co/8Dz4K041/2025-07-12-15-17.png)
 
-3. Enter API Key, Merchant Key, and other required settings.
+3. Enter API Key, Merchant Key in Module Settings.
 
     ![CutePe WHMCS Module Settings](https://i.ibb.co/Y4DdbXs2/2025-07-12-15-21.png)
 
