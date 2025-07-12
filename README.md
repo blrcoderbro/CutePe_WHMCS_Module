@@ -2,6 +2,13 @@
 
 Integrate CutePe payment gateway with WHMCS to accept payments securely.
 
+### What's New in Version 2.0
+
+- **SignUp & Login Added**: Users can now sign up and log in directly through the CutePe module interface.
+- **Webhook URL Added**: Simplified webhook URL configuration for seamless callback handling.
+- **Payment Button Changed**: Redesigned payment button for better user experience and accessibility.
+- **SQL Import Automated**: SQL database import is now automated during installation, reducing setup time.
+
 ## Features
 
 - Easy setup and integration.
@@ -24,6 +31,7 @@ Integrate CutePe payment gateway with WHMCS to accept payments securely.
     ![CutePe WHMCS Module Settings](https://i.ibb.co/Y4DdbXs2/2025-07-12-15-21.png)
 
 4. Copy and paste callback URL into CutePe Merchant Dashboard.
+
 
 ## Configuration
 
