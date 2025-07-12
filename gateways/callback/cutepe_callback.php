@@ -29,7 +29,7 @@ if (!$status || !$orderId || !$receivedHash) {
     exit;
 }
 if($status !='success'){
-    logTransaction($gatewayParams['name'], $_GET, "Paiment Failed");
+    logTransaction($gatewayParams['name'], $_GET, "Payment Failed");
     header("Location: {$redirectUrl}&paymentfailed=true&error=missing_params");
     exit;
 }
