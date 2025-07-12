@@ -24,8 +24,24 @@ function cutepe_MetaData()
 }
 
 function cutepe_config() {
+    global $CONFIG;
+    $webhookUrl = $CONFIG['SystemURL'] . '/modules/gateways/callback/cutepe_callback.php';
+
     $configarray = array(
         "FriendlyName" => array("Type" => "System", "Value" => "CutePe"),
+        "Description" => array("Type" => "System", "Value" => "CutePe Payment Gateway for WHMCS"),
+        "Version" => array("Type" => "System", "Value" => "1.1"),
+        "SignUp" => array(
+            "FriendlyName" => "Important",
+            "Type" => "comment",
+            "Description" => "First <a href='https://cutepe.com/register' target='_blank'>Signup</a> for a CutePe account OR <a href='https://cutepe.com/login' target='_blank'>Login</a> if you have an existing account."
+        ),
+        'enableWebhook' => array(
+            'FriendlyName' => 'Enable Webhook',
+            'Type' => 'yesno',
+            'Default' => false,
+            'Description' => 'Enable CutePe Webhook <a href="https://cutepe.com/dashboard/webhooks">here</a> with the URL listed below. <br/><br><span>'.htmlspecialchars($webhookUrl).'</span><br/>',
+        ),
         "cutepe_api_key" => array("FriendlyName" => "CutePe API Key", "Type" => "password", "Size" => "50", "Placeholder" => "YOUR_API_KEY"),
         "merchant_key" => array("FriendlyName" => "Merchant Key", "Type" => "text", "Size" => "30", "Placeholder" => "paytm, phonepe, etc."),
     );
@@ -87,9 +103,11 @@ function cutepe_link($params) {
         if (isset($response_data['status']) && $response_data['status'] == 'success') {
             $payment_url = $response_data['payment_url'];
             
-            $code = '<form method="GET" action="' . $payment_url . '">';
-            $code .= '<input type="submit" value="Pay Now with CutePe" />';
+            $code = '<div style="text-align: center; margin-top: 20px;">';
+            $code .= '<form method="GET" action="' . htmlspecialchars($payment_url, ENT_QUOTES, 'UTF-8') . '" style="display: inline-block;">';
+            $code .= '<button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Pay Now with CutePe</button>';
             $code .= '</form>';
+            $code .= '</div>';
 
             return $code;
         } else {

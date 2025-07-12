@@ -1,16 +1,19 @@
 {
     "schema": "1.0",
     "type": "whmcs-gateways",
-    "name": "cutepe-gateway",
+    "name": "cutepe",
     "license": "MIT",
-    "category": "gateway",
+    "category": "payments",
     "description": {
         "name": "CutePe Gateway",
-        "tagline": "Payment Gateway to Collect Payments",
+        "tagline": "UPI Payment Gateway to Collect Payments",
         "long": "This Module will help you to collect payments via CutePe QR payment system.",
         "features": [
             "Instant Payment",
-            "Realtime Response"
+            "Realtime Response",
+            "Supports Multiple Payment Methods Like Paytm, PhonePe etc.",
+            "Easy to Use",
+            "Supports Webhook"
         ]
     },
     "logo": {
@@ -25,7 +28,7 @@
     },
     "authors": [
         {
-            "name": "A3LRK Technologies",
+            "name": "A3LRK Technologies Pvt. Ltd.",
             "homepage": "https:\/\/cutepe.com\/"
         }
     ]
