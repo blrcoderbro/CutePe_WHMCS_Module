@@ -31,9 +31,9 @@ add_hook('AfterModuleCreate', 1, function($vars) {
         // Insert new settings
         if (!empty($settingsToInsert)) {
             Capsule::table('tblpaymentgateways')->insert($settingsToInsert);
-            logActivity("Payment gateway 'cutepe-gateway' settings updated automatically."); // Log for debugging
+            logActivity("Payment gateway 'cutepe' settings updated automatically."); // Log for debugging
         } else {
-            logActivity("Payment gateway 'cutepe-gateway' settings already exist. No update needed."); // Log for debugging
+            logActivity("Payment gateway 'cutepe' settings already exist. No update needed."); // Log for debugging
         }
     }
 });

@@ -40,7 +40,7 @@ function cutepe_config() {
             'FriendlyName' => 'Enable Webhook',
             'Type' => 'yesno',
             'Default' => false,
-            'Description' => 'Enable CutePe Webhook <a href="https://cutepe.com/dashboard/webhooks">here</a> with the URL listed below. <br/><br><span>'.$webhookUrl.'</span><br/>',
+            'Description' => 'Enable CutePe Webhook <a href="https://cutepe.com/dashboard/webhooks">here</a> with the URL listed below. <br/><br><span>'.htmlspecialchars($webhookUrl).'</span><br/>',
         ),
         "cutepe_api_key" => array("FriendlyName" => "CutePe API Key", "Type" => "password", "Size" => "50", "Placeholder" => "YOUR_API_KEY"),
         "merchant_key" => array("FriendlyName" => "Merchant Key", "Type" => "text", "Size" => "30", "Placeholder" => "paytm, phonepe, etc."),
