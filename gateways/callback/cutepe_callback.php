@@ -92,7 +92,8 @@ if ($txnStatus === 'TXN_SUCCESS') {
         exit;
     }
 
-
+    $invoiceIdParts = explode('_', $orderId);
+    $invoiceId = $invoiceIdParts[0];
     $transactionId = $responseData['data']['upi_txn_id'];
     $paymentAmount = $responseData['data']['amount'];
     
