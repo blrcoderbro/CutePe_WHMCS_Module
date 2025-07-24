@@ -99,21 +99,6 @@ if ($txnStatus === 'TXN_SUCCESS') {
     
     addInvoicePayment($invoiceId, $transactionId, $paymentAmount, 0, $gatewayModuleName);
     logTransaction($gatewayParams['name'], $responseData, "Successful");
-    // Accept Order using WHMCS Local API
-    $command = 'AcceptOrder';
-    $postData = array(
-        'orderid' => $invoiceId,
-        'sendemail' => true,
-    );
-    $adminUsername = 'admin'; // Replace with a valid admin username
-
-    $results = localAPI($command, $postData, $adminUsername);
-
-    if ($results['result'] !== 'success') {
-        logTransaction($gatewayParams['name'], $results, "Accept Order Failed");
-        header("Location: {$redirectUrl}&paymentfailed=true&error=accept_order_failed");
-        exit;
-    }    
 
     // Redirect the client to the Client Area after success
     header("Location: {$redirectUrl}&paymentsuccess=true");
